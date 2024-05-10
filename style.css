@@ -44,3 +44,13 @@ tableau-viz {
     text-decoration: underline;
     color: blue;
 }
+
+.carousel {
+    margin: auto; /* Center the carousel horizontally */
+    max-width: 90%; /* Limiting the width of the carousel */
+}
+
+.carousel-inner img {
+    width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+}
