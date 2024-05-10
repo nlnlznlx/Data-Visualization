@@ -54,3 +54,8 @@ tableau-viz {
     width: 100%; /* Ensure images are responsive */
     height: auto; /* Maintain aspect ratio */
 }
+
+.authors {
+    font-size: 16px;
+    margin-top: 0;
+}
