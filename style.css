@@ -44,3 +44,8 @@ tableau-viz {
     text-decoration: underline;
     color: blue;
 }
+
+.authors {
+    font-size: 16px;
+    margin-top: 0;
+}
