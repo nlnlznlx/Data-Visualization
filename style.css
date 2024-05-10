@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+h1 {
+    text-align: center; /* Center-align the welcome message */
+    padding: 20px;
+    background: white; /* White background for the text area */
+    margin-top: 20px; /* Space above the welcome section */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+.viz-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.viz-description {
+    /* Adjust the width as necessary to fit your description in the space next to your viz */
+    width: 40%;
+    margin-right: 20px; /* Optional: adds some space between the description and the viz */
+}
+
+tableau-viz {
+    /* The viz will take up the rest of the horizontal space in the viz-wrapper */
+    width: 70%;
+    aspect-ratio: 16 / 8;
+}
+
+.navigation {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.navigation a {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+    color: blue;
+}
