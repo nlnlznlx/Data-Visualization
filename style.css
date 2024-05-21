@@ -51,7 +51,7 @@ h2 {
 
 .carousel {
     margin: auto; /* Center the carousel horizontally */
-    max-width: 90%; /* Limiting the width of the carousel */
+    max-width: 50%; /* Limiting the width of the carousel */
 }
 
 .carousel-inner img {
@@ -63,3 +63,40 @@ h2 {
     font-size: 16px;
     margin-top: 0;
 }
+
+.viz-wrapper {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.viz-wrapper .row {
+    align-items: center;
+}
+
+.viz-wrapper h2 {
+    margin-top: 20px;
+}
+
+
+.image-container {
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+
+.image-container img {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.costume-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: auto;
+    display: none;
+}
+
