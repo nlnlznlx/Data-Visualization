@@ -5,13 +5,30 @@ body {
     background-color: #f5f5f5;
 }
 
+.container {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.introduction{
+    width: 90%;
+    padding: 10px;
+    margin: auto; /* Adjusts margin for top and bottom spacing */
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 16px;
+}
+
+
 h1 {
     font-family: "PT Sans Narrow";
     text-align: center;
     padding: 20px;
     background-color: darkslateblue;
     color: white;
-    margin-top: 20px;
+    margin-bottom: 20px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
@@ -22,29 +39,29 @@ h2 {
 
 .viz-container {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center; /* Aligns children in the center of the container vertically */
+    align-items: center; /* Aligns children in the center of the container horizontally */
     margin-top: 20px;
 }
 
-.description, .viz-caption {
-    flex: 1; /* Ensures both take equal space */
+.description {
+    flex: none;
+    width: 90%; /* Sets a width to ensure it does not stretch too wide */
     padding: 20px;
-    margin: 0 10px 30px 10px; /* Ensure equal margin on all sides */
+    margin: 10px 0; /* Adjusts margin for top and bottom spacing */
     background-color: #f8f9fa;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     font-size: 16px;
 }
 
-.viz-caption {
-    text-align: center;
-    font-weight: bold;
+p{
+    margin: 5px;
 }
 
 .tableau-viz {
-    flex: 2; /* Tableau visualization takes up more space */
-    margin: 0 10px; /* Ensure equal margin */
+    margin: 10px 0;
 }
 
 .navigation {
@@ -85,7 +102,7 @@ h2 {
 
 .viz-wrapper {
     margin-top: 20px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .viz-wrapper .row {
@@ -97,26 +114,29 @@ h2 {
     color: #333;
 }
 
-.image-container {
+.container .image-container {
     position: relative;
     width: fit-content;
     margin: auto;
+    margin-top: 10px;
+    display: block; /* Ensure this is block to center the container */
 }
 
-.image-container img {
-    width: 100%;
+.container .image-container img {
+    width: 40%; /* Adjust if needed */
     height: auto;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto; /* Centers the image within the container */
     border-radius: 8px;
 }
 
-.costume-overlay {
+.container .costume-overlay {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: auto;
     display: none;
 }
 

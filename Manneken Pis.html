@@ -14,193 +14,186 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-<header>
-    <h1>Data Visualization for Manneken Pis Costumes</h1>
-    <nav class="navigation">
-        <a href="#intro">Introduction</a> |
-        <a href="#viz1">World Map</a> |
-        <a href="#viz2">Historical Context</a> |
-        <a href="#viz3">Belgium Map</a> |
-        <a href="#viz4">Treemap of Themes</a> |
-        <a href="#viz5">Timeline</a> |
-        <a href="#viz6">Time x Categories</a> |
-        <a href="#viz7">Categories by Months</a>
-    </nav>
-</header>
-<div class="container">
-    <p>Besides beer, fries and chocolate, the statue of Manneken Pis is one of the most famous icons of Belgium. Located in the center of Brussels, it receives millions of visitors per year. But did you know that around half of the year, Manneken Pis wears special costumes, donated by institutions all over the world? The GardeRobe Museum in Brussels preserves the more than 1000 costumes that were donated to the statue starting from 1747. On this website, you can explore where these costumes come from, what they represent and how Manneken Pis’ wardrobe has changed over the years.</p>
+    <header>
+        <h1>Data Visualization for Manneken Pis Costumes</h1>
+        <nav class="navigation">
+            <a href="#introduction">Introduction</a> |
+            <a href="#viz1">World Map</a> |
+            <a href="#viz2">Historical Context</a> |
+            <a href="#viz3">Belgium Map</a> |
+            <a href="#viz4">Timeline</a> |
+            <a href="#viz5">Themes</a> |
+            <a href="#viz6">Word Cloud</a> |
+            <a href="#viz7">Time x Categories</a> |
+            <a href="#viz8">Categories by Months</a>
+        </nav>
+    </header>
 
-<div class="container">
-    <div class="image-container">
-        <img id="baseImage" src="img/00-MPBase.png" alt="Manneken Pis Statue">
-        <img id="costumeImage" src="" alt="Costume" class="costume-overlay" onerror="this.style.display='none';">
-    </div>
-    <div id="costumeInfo" class="costume-info text-center my-3">
-        Dress me up!
-    </div>
-    <div class="d-flex justify-content-center mt-2">
-        <button onclick="previousCostume()" class="btn btn-outline-secondary btn-lg mx-2">
-            <i class="fas fa-chevron-left"></i> Previous
-        </button>
-        <button onclick="nextCostume()" class="btn btn-outline-secondary btn-lg mx-2">
-            <i class="fas fa-chevron-right"></i> Next
-        </button>
-    </div>
-    <div id="viz1" class="viz-wrapper">
-        <h2>World Map</h2>
-        <div class="viz-container">
-            <div class="viz-caption">
-                <p>World map</p>
-            </div>
-            <div class="description">
-                <p>Interactivity</p>
-                <p>This map shows the costumes that each country donated to Manneken Pis. Hover over a country to see some of its most recent costumes and to discover whether these costumes represent ‘culture’ (traditional costumes, gastronomy…), ‘civic’ (professions, education…), ‘science’ (health & medicine, environment) or ‘social’ (leisure, charitable…) topics! The shade of the country on the map indicates how many costumes it donated: the darker the brown, the more costumes come from this country.</p>
-                <p>Content</p>
-                <p>As you could probably guess, most costumes worn by Manneken Pis come from Belgium (654 out of XXX costumes). However, France is also a frequent donator with a total of 101 costumes. Next in the top five come Czechia (29), Spain (28), Italy (20) and the United States (21). Although most costumes come from Europe, Manneken Pis has worn clothes from all continents!</p>
-            </div>
-            <div class="tableau-viz">
-                <tableau-viz id="tableauViz1"
-                             src="https://public.tableau.com/views/Manneken_Pis_world_mappictures/Dashboard1?:language=zh-CN&:sid=&:display_count=n&:origin=viz_share_link"
-                             toolbar="bottom"
-                             hide-tabs>
-                </tableau-viz>
+    <div class="container">
+        <div class="introduction">
+            <p>Besides beer, fries and chocolate, the statue of Manneken Pis is one of the most famous icons of Belgium. Located in the center of Brussels, it receives millions of visitors per year. But did you know that around half of the year, Manneken Pis wears special costumes, donated by institutions all over the world? The <a href="https://www.mannekenpis.brussels/en/">GardeRobe Museum</a> in Brussels preserves the more than 1000 costumes that were donated to the statue starting from 1747. On this website, you can explore where these costumes come from, what they represent and how Manneken Pis’ wardrobe has changed over the years.</p>
+        </div>
+
+        <div class="image-container">
+            <img id="baseImage" src="img/00-MPBase.png" alt="Manneken Pis Statue">
+            <img id="costumeImage" src="" alt="Costume" class="costume-overlay" onerror="this.style.display='none';">
+        </div>
+        <div id="costumeInfo" class="costume-info text-center my-3">
+            Dress me up!
+        </div>
+        <div class="d-flex justify-content-center mt-2">
+            <button onclick="previousCostume()" class="btn btn-outline-secondary btn-lg mx-2">
+                <i class="fas fa-chevron-left"></i> Previous
+            </button>
+            <button onclick="nextCostume()" class="btn btn-outline-secondary btn-lg mx-2">
+                <i class="fas fa-chevron-right"></i> Next
+            </button>
+        </div>
+
+        <div id="viz1" class="viz-wrapper">
+            <h2>World Map</h2>
+            <div class="viz-container">
+                <div class="description">
+                    <p>As you could probably guess, most costumes worn by Manneken Pis come from Belgium (654 out of XXX costumes). However, France is also a frequent donator with a total of 101 costumes. Next in the top five come Czechia (29), Spain (28), Italy (20) and the United States (21). Although most costumes come from Europe, Manneken Pis has worn clothes from all continents!</p>
+                    <p>This map shows the costumes that each country donated to Manneken Pis. Hover over a country to see some of its most recent costumes and to discover whether these costumes represent ‘culture’ (traditional costumes, gastronomy…), ‘civic’ (professions, education…), ‘science’ (health & medicine, environment) or ‘social’ (leisure, charitable…) topics! The shade of the country on the map indicates how many costumes it donated: the darker the brown, the more costumes come from this country.</p>
+                </div>
+                <div class="tableau-viz">
+                    <tableau-viz id="tableauViz1"
+                                 src="https://public.tableau.com/views/Manneken_Pis_world_mappictures/Dashboard1?:language=zh-CN&:sid=&:display_count=n&:origin=viz_share_link"
+                                 toolbar="bottom"
+                                 hide-tabs>
+                    </tableau-viz>
+                </div>
             </div>
         </div>
-    </div>
-    <br><br><br><br>
 
-    <h2>Historical Context</h2>
-    <div id="viz2" class="viz-wrapper">
-        <div class="viz-container">
-            <div class="viz-caption">
-            </div>
-            <div class="description">
-                <p>Here is some description for the visualization.</p>
-            </div>
-            <div class="tableau-viz">
-                <tableau-viz id="tableauViz1"
-                             src="https://public.tableau.com/views/historical_context_vis/Sheet1?:language=zh-CN&:sid=&:display_count=n&:origin=viz_share_link "
-                             toolbar="bottom"
-                             hide-tabs>
-                </tableau-viz>
+        <div id="viz2" class="viz-wrapper">
+            <h2>Historical Context</h2>
+            <div class="viz-container">
+                <div class="description">
+                    <p>Here is some description for the visualization.</p>
+                </div>
+                <div class="tableau-viz">
+                    <tableau-viz id="tableauViz1"
+                                 src="https://public.tableau.com/views/historical_context_vis/Sheet1?:language=zh-CN&:sid=&:display_count=n&:origin=viz_share_link "
+                                 toolbar="bottom"
+                                 hide-tabs>
+                    </tableau-viz>
+                </div>
             </div>
         </div>
-    </div>
-    <br><br><br><br>
 
-    <h2>Belgium</h2>
-    <div id="viz3" class="viz-wrapper">
-        <div class="viz-container">
-            <div class="viz-caption">
-            </div>
-            <div class="description">
-                <p>This map shows all the locations in Belgium where Manneken Pis got a costume from.</p>
-                <p>As can be seen on the map, most of Manneken Pis’ costumes come from its own city, Brussels. Liège (8 costumes), Mons (6 costumes) and Ghent (4 costumes) delivered the most costumes after Brussels. In total, 90 municipalities have donated a costume to the statue</p>
-            </div>
-            <div class="tableau-viz">
-                <tableau-viz id="tableauViz1"
-                             src="https://public.tableau.com/views/Belgiummappictures/Belgium?:language=zh-CN&:sid=&:display_count=n&:origin=viz_share_link"
-                             toolbar="bottom"
-                             hide-tabs>
-                </tableau-viz>
+        <div id="viz3" class="viz-wrapper">
+            <h2>Belgium Map</h2>
+            <div class="viz-container">
+                <div class="description">
+                    <p>This map shows all the locations in Belgium where Manneken Pis got a costume from.</p>
+                    <p>As can be seen on the map, most of Manneken Pis’ costumes come from its own city, Brussels. Liège (8 costumes), Mons (6 costumes) and Ghent (4 costumes) delivered the most costumes after Brussels. In total, 90 municipalities have donated a costume to the statue</p>
+                </div>
+                <div class="tableau-viz">
+                    <tableau-viz id="tableauViz1"
+                                 src="https://public.tableau.com/views/Belgiummappictures/Belgium?:language=zh-CN&:sid=&:display_count=n&:origin=viz_share_link"
+                                 toolbar="bottom"
+                                 hide-tabs>
+                    </tableau-viz>
+                </div>
             </div>
         </div>
-    </div>
-    <br><br><br><br>
-    <h2>Themes</h2>
-    <div id="viz4" class="viz-wrapper">
-        <div class="viz-container">
-            <div class="viz-caption">
-            </div>
-            <div class="description">
-                <p>Interactivity</p>
-                <p>The following figure represents the different themes that the costumes of Manneken Pis display. We grouped these themes in the broader categories of ‘culture’, ‘science’, ‘social’ and ‘civic’. In the figure, the size of each box represents the importance of the theme or category among the ensemble of costumes.</p>
-                <p>Content</p>
-                <p>The figure shows that the category ‘culture’ is by far the most represented, whereas ‘science’ is not much represented. Not only is there a greater variety of themes inside the category ‘culture’, most of these cultural themes also appear often in Manneken Pis’ costumes. The most represented theme is ‘folklore associations’: the statue wore 248 costumes related to folklore associations. The ‘social’ and ‘civic’ categories are equally well represented.</p>
-            </div>
-            <div class="tableau-viz">
-                <tableau-viz id="tableauViz1"
-                             src="https://public.tableau.com/views/categories_17158721695010/categories?:language=zh-CN&:sid=&:display_count=n&:origin=viz_share_link"
-                             toolbar="bottom"
-                             hide-tabs>
-                </tableau-viz>
+
+        <div id="viz4" class="viz-wrapper">
+            <h2>Timeline</h2>
+            <div class="viz-container">
+                <div class="description">
+                    <p>The tradition of clothing Manneken Pis begins as early as 1747, but most of the costumes date from after the Second World War, starting from 1918. Scroll to the right to see the evolution in costumes up until 2023!</p>
+                    <p>The graph shows that the number of costumes has been rising steadily since the end of the First World War. However, during the Second World War, Manneken Pis received only one costume (in 1941): a military costume from the First World War. From the 1980s, the number of costumes averages 20 to 30 costumes per year.</p>
+                </div>
+                <div class="tableau-viz">
+                    <tableau-viz id="tableauViz1"
+                                 src="https://public.tableau.com/views/Timeline_17158716255270/time?:language=zh-CN&:sid=&:display_count=n&:origin=viz_share_link"
+                                 toolbar="bottom"
+                                 hide-tabs>
+                    </tableau-viz>
+                </div>
             </div>
         </div>
-    </div>
-    <br><br><br><br>
 
-
-    <h2>Timeline</h2>
-    <div id="viz5" class="viz-wrapper">
-        <div class="viz-container">
-            <div class="viz-caption">
-
-            </div>
-            <div class="description">
-                <p>Interactivity</p>
-                <p>The tradition of clothing Manneken Pis begins as early as 1747, but most of the costumes date from after the Second World War, starting from 1918. Scroll to the right to see the evolution in costumes up until 2023!</p>
-                <p>Description</p>
-                <p>The graph shows that the number of costumes has been rising steadily since the end of the First World War. However, during the Second World War, Manneken Pis received only one costume (in 1941): a military costume from the First World War. From the 1980s, the number of costumes averages 20 to 30 costumes per year.</p>
-            </div>
-            <div class="tableau-viz">
-                <tableau-viz id="tableauViz1"
-                             src="https://public.tableau.com/views/Timeline_17158716255270/time?:language=zh-CN&:sid=&:display_count=n&:origin=viz_share_link"
-                             toolbar="bottom"
-                             hide-tabs>
-                </tableau-viz>
+        <div id="viz5" class="viz-wrapper">
+            <h2>Themes</h2>
+            <div class="viz-container">
+                <div class="description">
+                    <p>The following figure represents the different themes that the costumes of Manneken Pis display. We grouped these themes in the broader categories of ‘culture’, ‘science’, ‘social’ and ‘civic’. In the figure, the size of each box represents the importance of the theme or category among the ensemble of costumes.</p>
+                    <p>The figure shows that the category ‘culture’ is by far the most represented, whereas ‘science’ is not much represented. Not only is there a greater variety of themes inside the category ‘culture’, most of these cultural themes also appear often in Manneken Pis’ costumes. The most represented theme is ‘folklore associations’: the statue wore 248 costumes related to folklore associations. The ‘social’ and ‘civic’ categories are equally well represented.</p>
+                </div>
+                <div class="tableau-viz">
+                    <tableau-viz id="tableauViz1"
+                                 src="https://public.tableau.com/views/categories_17158721695010/categories?:language=zh-CN&:sid=&:display_count=n&:origin=viz_share_link"
+                                 toolbar="bottom"
+                                 hide-tabs>
+                    </tableau-viz>
+                </div>
             </div>
         </div>
-    </div>
-    <br><br><br><br>
-    <h2>Time x Categories</h2>
-    <div id="viz6" class="viz-wrapper">
-        <div class="viz-container">
-            <div class="viz-caption">
-            </div>
-            <div class="description">
-                <p>Interactivity</p>
-                <p>In the next graph, each of the four themes of costumes is represented by a differently colored line. You can scroll to the right to discover which categories gained more popularity over time and click on one of the graphs to highlight it.</p>
-                <p>Content</p>
-                <p>The graph shows that science is clearly the newest category: it appears in a first costume in 1987, but it only gains more popularity in the last years, starting from 2018. The category ‘civic’ is, perhaps unsurprisingly, the first to appear in Manneken Pis’ costumes after the First World War: his costumes from 1918 and 1919 were both gifted by Belgian military troops and represent a soldier attire. The same trend repeats itself in 1945-1946 after the Second World War: again, the first three costumes represent the recent conflict. While the category of ‘culture’ has always been the most represented after 1947, the ‘civic’ and ‘social’ categories exchange turns as the second most popular category. The ‘social’ category seems to be gaining ground in the last two decades.</p>
-            </div>
-            <div class="tableau-viz">
-                <tableau-viz id="tableauViz1"
-                             src="https://public.tableau.com/views/categories_time/categories_time?:language=zh-CN&:sid=&:display_count=n&:origin=viz_share_link"
-                             toolbar="bottom"
-                             hide-tabs>
-                </tableau-viz>
+
+        <div id="viz6" class="viz-wrapper">
+            <h2>Word Cloud</h2>
+            <div class="viz-container">
+                <div class="description">
+                    <p>description</p>
+                </div>
+                <div class="tableau-viz">
+                    <tableau-viz id="tableauViz1"
+                                 src="https://public.tableau.com/views/wordcloud2_17163168448580/Dashboard1?:language=en-US&publish=yes&:sid=647ED8D4342448C09496ACD120315317-0:0&:display_count=n&:origin=viz_share_link"
+                                 toolbar="bottom"
+                                 hide-tabs>
+                    </tableau-viz>
+                </div>
             </div>
         </div>
-    </div>
-    <br><br><br><br>
-    <h2>Categories by Months</h2>
-    <div id="viz7" class="viz-wrapper">
-        <div class="viz-container">
-            <div class="viz-caption">
-            </div>
-            <div class="description">
-                <p>Interactivity</p>
-                <p>Have you ever wondered whether Manneken Pis’ costume changes with the seasons? Look at the following graph to find out! The colored lines show the number of costumes per category worn in each month over the whole period of the dataset.</p>
-                <p>Content</p>
-                <p>Interestingly, the four categories of costumes seem to follow the same trend: most costumes are donated in spring and autumn, whereas the summer months (July and August) present a clear trough. This means that during the busiest tourist season, Manneken Pis is not clothed: consequently, a lot of tourists may not even know that Manneken Pis ever wears costumes! The extreme peak of cultural costumes in September coincides with the start of the cultural seasons in most cities, such as Brussels.</p>
-            </div>
-            <div class="tableau-viz">
-                <tableau-viz id="tableauViz1"
-                             src="https://public.tableau.com/views/categories_month/categories_month?:language=zh-CN&:sid=&:display_count=n&:origin=viz_share_link"
-                             toolbar="bottom"
-                             hide-tabs>
-                </tableau-viz>
+
+        <div id="viz7" class="viz-wrapper">
+            <h2>Time x Categories</h2>
+            <div class="viz-container">
+                <div class="description">
+                    <p>The graph shows that science is clearly the newest category: it appears in a first costume in 1987, but it only gains more popularity in the last years, starting from 2018. The category ‘civic’ is, perhaps unsurprisingly, the first to appear in Manneken Pis’ costumes after the First World War: his costumes from 1918 and 1919 were both gifted by Belgian military troops and represent a soldier attire. The same trend repeats itself in 1945-1946 after the Second World War: again, the first three costumes represent the recent conflict. While the category of ‘culture’ has always been the most represented after 1947, the ‘civic’ and ‘social’ categories exchange turns as the second most popular category. The ‘social’ category seems to be gaining ground in the last two decades.</p>
+                    <p>In the next graph, each of the four themes of costumes is represented by a differently colored line. You can scroll to the right to discover which categories gained more popularity over time and click on one of the graphs to highlight it.</p>
+                </div>
+                <div class="tableau-viz">
+                    <tableau-viz id="tableauViz1"
+                                 src="https://public.tableau.com/views/categories_time/categories_time?:language=zh-CN&:sid=&:display_count=n&:origin=viz_share_link"
+                                 toolbar="bottom"
+                                 hide-tabs>
+                    </tableau-viz>
+                </div>
             </div>
         </div>
+
+        <div id="viz8" class="viz-wrapper">
+            <h2>Categories by Months</h2>
+            <div class="viz-container">
+                <div class="description">
+                    <p>Have you ever wondered whether Manneken Pis’ costume changes with the seasons? Look at the following graph to find out! The colored lines show the number of costumes per category worn in each month over the whole period of the dataset.</p>
+                    <p>Interestingly, the four categories of costumes seem to follow the same trend: most costumes are donated in spring and autumn, whereas the summer months (July and August) present a clear trough. This means that during the busiest tourist season, Manneken Pis is not clothed: consequently, a lot of tourists may not even know that Manneken Pis ever wears costumes! The extreme peak of cultural costumes in September coincides with the start of the cultural seasons in most cities, such as Brussels.</p>
+                </div>
+                <div class="tableau-viz">
+                    <tableau-viz id="tableauViz1"
+                                 src="https://public.tableau.com/views/categories_month/categories_month?:language=zh-CN&:sid=&:display_count=n&:origin=viz_share_link"
+                                 toolbar="bottom"
+                                 hide-tabs>
+                    </tableau-viz>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="authors">
+                Marie Kolenberg, Suchismita Ghosh, Yiyao Jin, Zita Baronnet, Séraphine Verboven, Meihan Luo
+            </div>
+        </footer>
     </div>
 
-</div>
-<footer class="footer">
-    <div class="authors">
-        Marie Kolenberg, Suchismita Ghosh, Yiyao Jin, Zita Baronnet, Séraphine Verboven, Meihan Luo
-    </div>
-</footer>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/
-<script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src='script.js'></script>
+</body>
+</html>
