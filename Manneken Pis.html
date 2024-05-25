@@ -18,8 +18,9 @@
         <h1>Data Visualization for Manneken Pis Costumes</h1>
         <nav class="navigation">
             <a href="#introduction">Introduction</a> |
-            <a href="#viz1">World Map</a> |
-            <a href="#viz3">Belgium Map</a> |
+            <a href="#viz1">Brussels Map</a> |
+            <a href="#viz2">Belgium Map</a> |
+            <a href="#viz3">World Map</a> |
             <a href="#viz4">Timeline</a> |
             <a href="#viz5">Themes</a> |
             <a href="#viz6">Word Cloud</a> |
@@ -50,6 +51,40 @@
         </div>
 
         <div id="viz1" class="viz-wrapper">
+            <h2>Brussels Map</h2>
+            <div class="viz-container">
+                <div class="description">
+                    <p></p>
+                    <p></p>
+                </div>
+                <div class="tableau-viz">
+                    <tableau-viz id="tableauViz1"
+                                 src="https://public.tableau.com/views/Manneken_Pis_Brusselspictures/Dashboard1?:language=zh-CN&:sid=&:display_count=n&:origin=viz_share_link"
+                                 toolbar="bottom"
+                                 hide-tabs>
+                    </tableau-viz>
+                </div>
+            </div>
+        </div>
+
+        <div id="viz2" class="viz-wrapper">
+            <h2>Belgium Map</h2>
+            <div class="viz-container">
+                <div class="description">
+                    <p>This map shows all the locations in Belgium where Manneken Pis got a costume from.</p>
+                    <p>As can be seen on the map, most of Manneken Pis’ costumes come from its own city, Brussels. Liège (8 costumes), Mons (6 costumes) and Ghent (4 costumes) delivered the most costumes after Brussels. In total, 90 municipalities have donated a costume to the statue</p>
+                </div>
+                <div class="tableau-viz">
+                    <tableau-viz id="tableauViz1"
+                                 src="https://public.tableau.com/views/Belgiummappictures/Dashboard1?:language=zh-CN&:sid=&:display_count=n&:origin=viz_share_link"
+                                 toolbar="bottom"
+                                 hide-tabs>
+                    </tableau-viz>
+                </div>
+            </div>
+        </div>
+
+        <div id="viz3" class="viz-wrapper">
             <h2>World Map</h2>
             <div class="viz-container">
                 <div class="description">
@@ -66,22 +101,6 @@
             </div>
         </div>
 
-        <div id="viz3" class="viz-wrapper">
-            <h2>Belgium Map</h2>
-            <div class="viz-container">
-                <div class="description">
-                    <p>This map shows all the locations in Belgium where Manneken Pis got a costume from.</p>
-                    <p>As can be seen on the map, most of Manneken Pis’ costumes come from its own city, Brussels. Liège (8 costumes), Mons (6 costumes) and Ghent (4 costumes) delivered the most costumes after Brussels. In total, 90 municipalities have donated a costume to the statue</p>
-                </div>
-                <div class="tableau-viz">
-                    <tableau-viz id="tableauViz1"
-                                 src="https://public.tableau.com/views/Belgiummappictures/Belgium?:language=zh-CN&:sid=&:display_count=n&:origin=viz_share_link"
-                                 toolbar="bottom"
-                                 hide-tabs>
-                    </tableau-viz>
-                </div>
-            </div>
-        </div>
 
         <div id="viz4" class="viz-wrapper">
             <h2>Timeline</h2>
