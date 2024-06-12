@@ -17,19 +17,17 @@
     <header>
         <h1>Data Visualization for Manneken Pis Costumes</h1>
         <nav class="navigation">
-            <a href="#introduction">Introduction</a> |
-            <a href="#viz1">Brussels Map</a> |
-            <a href="#viz2">Belgium Map</a> |
-            <a href="#viz3">World Map</a> |
-            <a href="#viz4">Timeline</a> |
-            <a href="#viz5">Themes</a> |
-            <a href="#viz6">Word Cloud</a>
+            <a href="#intro">Introduction</a> |
+            <a href="#viz1">Location</a> |
+            <a href="#viz2">Time trend</a> |
+            <a href="#viz3">Categories</a> |
+            <a href="#viz4">Word Cloud</a>
         </nav>
     </header>
 
     <div class="container">
         <div class="introduction">
-            <p>Besides beer, fries and chocolate, the statue of Manneken Pis is one of the most famous icons of Belgium. Located in the center of Brussels, it receives millions of visitors per year. But did you know that around half of the year, Manneken Pis wears special costumes, donated by institutions all over the world? The <a href="https://www.mannekenpis.brussels/en/">GardeRobe Museum</a> in Brussels preserves the more than 1000 costumes that were donated to the statue starting from 1747. On this website, you can explore where these costumes come from, what they represent and how Manneken Pis’ wardrobe has changed over the years.</p>
+            <p>Besides beer, fries and chocolate, the statue of Manneken Pis (‘the little peeing boy’) is one of the most famous icons of Belgium. Located in the center of Brussels, it receives millions of visitors per year. But did you know that around half of the year, Manneken Pis wears special costumes, donated by institutions all over the world? The <a href="https://www.mannekenpis.brussels/en/">GardeRobe Museum</a> in Brussels preserves the more than 1000 costumes that were donated to the statue starting from 1747. On this website, you can explore where these costumes come from, what they represent and how Manneken Pis’ wardrobe has changed over the years.</p>
         </div>
 
         <div class="image-container">
@@ -48,12 +46,21 @@
             </button>
         </div>
 
-        <div id="viz1" class="viz-wrapper">
-            <h2>Brussels Map</h2>
+        <div id="intro" class="viz-wrapper">
+            <h2>Manneken Pis and his costumes</h2>
             <div class="viz-container">
                 <div class="description">
-                    <p></p>
-                    <p></p>
+                    <p>Manneken Pis has been an icon of Brussels’ culture well before Belgium even existed. The most popular legend that explains the story of the statue says that Brussels suffered from invaders, that robbed and lit fires across the city. One night, a little boy was woken up by the noise and noticed the fire. Having no water to extinguish it, he peed on the flames and prevented the city from burning down.</p>
+                    <p>The first statue honoring this little boy was created in 1453, and it has been located in the Eikestraat ever since- although it has been stolen a few times as well. It was after such a robbery of Manneken Pis, by French soldiers in the War of Austrian Succession, that the statue received its first costume. This rapidly inspired the city of Brussels, as well as other places in Flanders and abroad, to donate new costumes to Manneken Pis. Let’s zoom in to see where all these costumes came from!</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="viz1" class="viz-wrapper">
+            <h2>Origins of the costumes</h2>
+            <div class="viz-container">
+                <div class="description">
+                    <p>In the following visualization, you can see how many costumes originate from Brussels. Scroll in the right-side window to discover the names and pictures of the outfits!</p>
                 </div>
                 <div class="tableau-viz">
                     <tableau-viz id="tableauViz1"
@@ -62,15 +69,8 @@
                                  hide-tabs>
                     </tableau-viz>
                 </div>
-            </div>
-        </div>
-
-        <div id="viz2" class="viz-wrapper">
-            <h2>Belgium Map</h2>
-            <div class="viz-container">
                 <div class="description">
-                    <p>This map shows all the locations in Belgium where Manneken Pis got a costume from.</p>
-                    <p>As can be seen on the map, most of Manneken Pis’ costumes come from its own city, Brussels. Liège (8 costumes), Mons (6 costumes) and Ghent (4 costumes) delivered the most costumes after Brussels. In total, 90 municipalities have donated a costume to the statue</p>
+                    <p>The 191 Brussels costumes make up around 15% of Manneken Pis wardrobe. But did you know that 90 other Belgian municipalities donated a costume? The following map indicates the number of outfits each Belgian municipality gifted: the darker the dot, the more costumes originate from the location. Click on a location to see its costumes appear on the right! </p>
                 </div>
                 <div class="tableau-viz">
                     <tableau-viz id="tableauViz1"
@@ -79,15 +79,9 @@
                                  hide-tabs>
                     </tableau-viz>
                 </div>
-            </div>
-        </div>
-
-        <div id="viz3" class="viz-wrapper">
-            <h2>World Map</h2>
-            <div class="viz-container">
                 <div class="description">
-                    <p>As you could probably guess, most costumes worn by Manneken Pis come from Belgium (654 out of XXX costumes). However, France is also a frequent donator with a total of 101 costumes. Next in the top five come Czechia (29), Spain (28), Italy (20) and the United States (21). Although most costumes come from Europe, Manneken Pis has worn clothes from all continents!</p>
-                    <p>This map shows the costumes that each country donated to Manneken Pis. Hover over a country to see some of its most recent costumes and to discover whether these costumes represent ‘culture’ (traditional costumes, gastronomy…), ‘civic’ (professions, education…), ‘science’ (health & medicine, environment) or ‘social’ (leisure, charitable…) topics! The shade of the country on the map indicates how many costumes it donated: the darker the brown, the more costumes come from this country.</p>
+                    <p>In total, more than half of Manneken Pis’ outfits come from Belgium (654 costumes). Besides Brussels, Liège (8 costumes), Mons (6 costumes) and Ghent (4 costumes) delivered the most costumes. Have you noticed that Manneken Pis has received more costumes from Wallonia than from Flanders? Select a city to see what costumes they have donated to Manneken Pis! </p>
+                    <p>The following map shows the costumes that foreign countries donated to Manneken Pis. Hover over a country to see some of its most recent costumes and to discover which topics these costumes represent:  ‘culture’ (traditional costumes, gastronomy…), ‘civic’ (professions, education…), ‘science’ (health & medicine, environment) or ‘social’ (leisure, charitable…) topics. Click on a country to see its costumes appear on the right! The slider on the bottom lets you select the top 5, 10, … most important donators.</p>
                 </div>
                 <div class="tableau-viz">
                     <tableau-viz id="tableauViz1"
@@ -96,16 +90,17 @@
                                  hide-tabs>
                     </tableau-viz>
                 </div>
+                <div class="description">
+                    <p>Besides Manneken Pis’ home country, France is also a frequent donator with a total of 101 costumes. Although most costumes come from Europe, Manneken Pis has worn clothes from all continents! After France, Spain (28), the United States (21), Italy (20) and the Netherlands (17) donated most costumes. Let’s have a closer look at the costumes of the top 6 countries, to discover when they were donated and which themes they represent.</p>
+                </div>
             </div>
         </div>
 
-
-        <div id="viz4" class="viz-wrapper">
-            <h2>Timeline</h2>
+        <div id="viz2" class="viz-wrapper">
+            <h2>When were the costumes of the top 6 countries donated?</h2>
             <div class="viz-container">
                 <div class="description">
-                    <p>The tradition of clothing Manneken Pis begins as early as 1747, but most of the costumes date from after the Second World War, starting from 1918. Scroll to the right to see the evolution in costumes up until 2023!</p>
-                    <p>The graph shows that the number of costumes has been rising steadily since the end of the First World War. However, during the Second World War, Manneken Pis received only one costume (in 1941): a military costume from the First World War. From the 1980s, the number of costumes averages 20 to 30 costumes per year.</p>
+                    <p>The following timeline shows when the costumes from the following countries were donated. To see details about each costume from a specific country, hover over a country to see the descriptive annotations! Do you want to know more about the cultural connections of each country to the costumes? Use the color-coded country filter to learn more about the top 6 countries. Want to know about costumes before 1918? Slide the year filter left! </p>
                 </div>
                 <div class="tableau-viz">
                     <tableau-viz id="tableauViz1"
@@ -114,14 +109,17 @@
                                  hide-tabs>
                     </tableau-viz>
                 </div>
+                <div class="description">
+                    <p>What is interesting here is the social and historical context and the engagement of each country with Manneken Pis. While costumes begin to adorn Manneken Pis as early as 1747, there are significant changes in donation numbers in different categories over the years, especially during the world wars. Understandably, world crises have impacted costume donations. For example, between 1918 and 1944 costumes are mostly military in nature, and the only non-European country to donate a costume during this time was the USA which was also a military costume. In the last five years, especially during the pandemic years Manneken Pis has been only dressed in costumes from Belgium with the only exception being in 2023, when Netherlands donated a costume after a gap of 20 years to commemorate the diplomatic relation between Belgium and the Netherlands. We can also see that France has consistently donated costumes resulting in one of the highest number of donations where donations from Netherlands is occasional.</p>
+                </div>
             </div>
         </div>
 
-        <div id="viz5" class="viz-wrapper">
-            <h2>Themes</h2>
+        <div id="viz3" class="viz-wrapper">
+            <h2>Categories of the costumes from the top 6 countries </h2>
             <div class="viz-container">
                 <div class="description">
-                    <p>description</p>
+                    <p>In the bar graph below, you can observe how important each category of themes (culture, science, social and civic) is for each country. Each costume can represent multiple topics at once. The treemap below (the graph with the colored squares) represents the importance of the subthemes of each category for the six countries together (e.g. ‘folklore associations and ‘music’ for the ‘culture’ category). When you click on different parts of the bar graph, the treemap changes: when you click on the name of the country, the treemap will represent the theme representation for that country only. You can also click on a colored part of the bar graph (e.g. ‘culture’ in the bar of Belgium) to select only the division of culture-related topics in the treemap. Feel free to explore!</p>
                 </div>
                 <div class="tableau-viz">
                     <tableau-viz id="tableauViz1"
@@ -130,14 +128,17 @@
                                  hide-tabs>
                     </tableau-viz>
                 </div>
+                <div class="description">
+                    <p>It becomes clear that ‘culture’ is the most important category for all countries. Besides culture, the civic and social categories are also represented in the costumes of each country, with civic costumes being more important than social costumes. Interestingly, ‘civic’ costumes mostly depict professions for each country, but for the United States, 8 costumes represent military topics. Among the culture-related topics, traditional costumes or folklore associations are the most represented for each country. The ‘science’ category only appears for Belgium, France and Italy.</p>
+                </div>
             </div>
         </div>
 
-        <div id="viz6" class="viz-wrapper">
-            <h2>Word Cloud</h2>
+        <div id="viz4" class="viz-wrapper">
+            <h2>More About Themes</h2>
             <div class="viz-container">
                 <div class="description">
-                    <p>description</p>
+                    <p>So, what do the categories mean? The WordCloud below visualizes the most used terms in the descriptions of costumes across the database, divided by specific categories and prominent countries. The size of each term correlates with its frequency. Using the checkboxes, you can filter the word cloud to display only words associated with selected themes or to filter terms by country.</p>
                 </div>
                 <div class="tableau-viz">
                     <tableau-viz id="tableauViz1"
@@ -145,6 +146,23 @@
                                  toolbar="bottom"
                                  hide-tabs>
                     </tableau-viz>
+                </div>
+                <div class="description">
+                    <p>In civic category, words like “professional,” “students” and “school” stand out, reflecting the category's focus on education and professional themes. However, it’s not the case for the United States, where words related to military themes such as “war,” “army," and “navy” dominate.</p>
+                    <p>The science category predominantly relates to health issues, as evidenced by terms like “cancer,” “covid,” and “disease.” Costumes in this category primarily serve to “raise public awareness” about these health concerns, with frequent usage of these terms. Notably, Belgium is the sole contributor to this category.</p>
+                    <p>The social category offers a more international perspective, emphasizing terms like “movement,” “activities,” and “initiatives.” It highlights the significant roles played by young people and organizations in addressing social issues. Spain, in particular, demonstrates a strong connection to sports, especially football.</p>
+                    <p>The culture category is the most diverse, focusing on aspects of folklore and highlighting cultural-related terms such as “traditions,” “carnivals,” “anniversary,” and “festival.” These terms are notably prevalent in the word clouds for Belgium, France, Italy, the Netherlands, and Spain, but less so in the U.S. In contrast, the American context features distinct terms such as “Disney,” “conflict,” “unified,” “independence,” and “indians,” which are closely linked to American history.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="funfacts" class="viz-wrapper">
+            <h2>Fun Facts</h2>
+            <div class="viz-container">
+                <div class="description">
+                    <p>Did you know that Manneken Pis has a brother in Geraardsbergen, a city in Eastern Flanders that is renowned for its steep hill that is part of the Tour of Flanders? There is some debate about who was first. The statue of Geraardsbergen dates to 1459, while the current version (and, thus, not the first!) of the Brussels statue has been in circulation since 1619. However, the tradition of clothing certainly originated in Brussels! Manneken Pis from Geraardsbergen has received more than 250 costumes since the founding of the Manneken Pis-museum of the city in 1984, but some older costumes have not been preserved.</p>
+                    <p>Did you know that you can discover Manneken Pis’ wardrobe of the month via this website? https://www.mannekenpis.brussels/en/dressing-calendar </p>
+                    <p>Did you know that you can donate your own costume to Manneken Pis? You need to send an official request to the College of Mayor and Aldermen of the City of Brussels, who then decide whether the statue will wear the costume, on the basis of a few criteria. All information, as well as a basic sewing pattern containing Manneken Pis’ measurements can be found on https://www.mannekenpis.brussels/en/the-tradition-of-dressing.</p>
                 </div>
             </div>
         </div>
